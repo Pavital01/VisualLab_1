@@ -1,0 +1,14 @@
+{
+  "transmission" : "Manual",
+  "name" : "Camry",
+  "manufacturer" : "BMV",
+  "weight" : 1498.0,
+  "dateOfIssue" : 1573196760616,
+  "backlit" : true,
+  "price" : 25000.0,
+  "safetyIndex" : 5.0,
+  "color" : "Green",
+  "length" : 2.2,
+  "width" : 1.5,
+  "height" : 2.2
+}
