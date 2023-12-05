@@ -1,0 +1,14 @@
+{
+  "transmission" : "Automatic",
+  "name" : "DDD",
+  "manufacturer" : "DDD",
+  "weight" : 72.0,
+  "dateOfIssue" : 1699170930528,
+  "backlit" : true,
+  "price" : 18000.0,
+  "safetyIndex" : 14,
+  "color" : "Blue",
+  "length" : 0.9,
+  "width" : 1.1,
+  "height" : 1.5
+}

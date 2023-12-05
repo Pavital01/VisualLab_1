@@ -1,0 +1,14 @@
+{
+  "transmission" : "Manual",
+  "name" : "фыв",
+  "manufacturer" : "фыв",
+  "weight" : 7.0,
+  "dateOfIssue" : 1698914603379,
+  "backlit" : false,
+  "price" : 4000.0,
+  "safetyIndex" : 25,
+  "color" : "Blue",
+  "length" : 0.5,
+  "width" : 0.5,
+  "height" : 0.6
+}

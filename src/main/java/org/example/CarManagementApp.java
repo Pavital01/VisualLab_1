@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -108,27 +110,28 @@ public class CarManagementApp extends JFrame {
         widthSpinner = new JSpinner(widthSpinnerModel);
         lengthSpinner = new JSpinner(lengthSpinnerModel);
         heightSpinner = new JSpinner(heightSpinnerModel);
-        JPanel addictionPanel = new JPanel(new GridLayout(1,2));
+//        JPanel addictionPanel = new JPanel(new GridLayout(1,2));
+        JPanel addictionPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+//        addictionPanel.setSize(0,200);
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1.0; // устанавливаем вес для первого столбца
-        gbc.fill = GridBagConstraints.HORIZONTAL;
 
+        Dimension safetyIndexSliderDimension = new Dimension(120, 30);
+        Dimension safetyIndexValueLabelDimension = new Dimension(50, 20);
         safetyIndexSlider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
-        safetyIndexSlider.setMajorTickSpacing(5);
-        safetyIndexSlider.setPaintLabels(true);
+//        safetyIndexSlider.setMajorTickSpacing(5);
+//        safetyIndexSlider.setPaintLabels(true);
+        safetyIndexSlider.setPreferredSize(safetyIndexSliderDimension);
         // Добавляем слушателя изменений к слайдеру
         // Устанавливаем метки на ползунке с шагом 0.1
         safetyIndexSlider.setLabelTable(safetyIndexSlider.createStandardLabels(5));
         // Создаем метку для отображения текущего значения
         JLabel valueLabel = new JLabel("Value: " + safetyIndexSlider.getValue());
+//        valueLabel.setPreferredSize(safetyIndexValueLabelDimension);
         safetyIndexSlider.addChangeListener(changeEvent -> valueLabel.setText("Value: " + safetyIndexSlider.getValue()));
-        addictionPanel.add(safetyIndexSlider,gbc);
-        gbc.gridx = 1;
-        gbc.weightx = 0.5; // устанавливаем вес для второго столбца
-        addictionPanel.add(valueLabel,gbc);
+//        safetyIndexSlider.setSize(10,10);
+        addictionPanel.add(safetyIndexSlider);
+        addictionPanel.add(valueLabel);
+
 
         saveImageIcon = new ImageIcon("src/main/resources/save.png");
         deleteImageIcon = new ImageIcon("src/main/resources/delete.png");
@@ -172,9 +175,11 @@ public class CarManagementApp extends JFrame {
 
 
         // настраиваю шаблон
-        JPanel inputPanel = new JPanel(new GridLayout(12, 2,5,10));
-        inputPanel.setSize(100,100);
+        JPanel inputPanel = new JPanel(new GridLayout(11, 2,5,10));
+        inputPanel.setSize(100,20);
         inputPanel.setBorder(new EmptyBorder(15, 25, 0, 0));
+//        Border border = new LineBorder(Color.BLACK, 2); // цвет и толщина линии
+//        inputPanel.setBorder(border);
 //        ((GridLayout) inputPanel.getLayout()).setVgap(10);  // Вертикальный отступ
 //        ((GridLayout) inputPanel.getLayout()).setHgap(5);  // Вертикальный отступ
 
@@ -195,6 +200,19 @@ public class CarManagementApp extends JFrame {
         groupBox.add(radio3);
 
         datePicker = new JDateChooser();
+
+        Dimension fieldDimension = new Dimension(200, 30);
+        nameField.setPreferredSize(fieldDimension);
+        manufacturerField.setPreferredSize(fieldDimension);
+        backlitCheckbox.setPreferredSize(fieldDimension);
+        colorComboBox.setPreferredSize(fieldDimension);
+        weightSpinner.setPreferredSize(fieldDimension);
+        priceSpinner.setPreferredSize(fieldDimension);
+        addictionPanel.setPreferredSize(fieldDimension);
+        datePicker.setPreferredSize(fieldDimension);
+        widthSpinner.setPreferredSize(fieldDimension);
+        lengthSpinner.setPreferredSize(fieldDimension);
+        heightSpinner.setPreferredSize(fieldDimension);
 
         inputPanel.add(new JLabel("Name:"));
         inputPanel.add(nameField);

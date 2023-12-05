@@ -1,0 +1,14 @@
+{
+  "transmission" : "Automatic",
+  "name" : "Example",
+  "manufacturer" : "Example",
+  "weight" : 16.0,
+  "dateOfIssue" : 1699017990857,
+  "backlit" : true,
+  "price" : 8000.0,
+  "safetyIndex" : 23,
+  "color" : "Black",
+  "length" : 1.1,
+  "width" : 1.3,
+  "height" : 0.9
+}

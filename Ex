@@ -1,0 +1,14 @@
+{
+  "transmission" : "Manual",
+  "name" : "Ex",
+  "manufacturer" : "Ex",
+  "weight" : 10.0,
+  "dateOfIssue" : 1678368439686,
+  "backlit" : true,
+  "price" : 10.0,
+  "safetyIndex" : 34,
+  "color" : "Blue",
+  "length" : 7.300000000000001,
+  "width" : 3.0,
+  "height" : 0.1
+}
